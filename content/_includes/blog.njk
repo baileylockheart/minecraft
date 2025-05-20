@@ -16,7 +16,7 @@
     <meta property="og:description" content="{{ description }}"/>
     <meta property="og:image" content="https://i.imgur.com/SewwaVX.png"/>
     <meta property="og:image:height" content="800"/>
-    <meta property="og:url" content="https://mc.lockheart.love/{{ name }}"/>
+    <meta property="og:url" content="https://mc.lockheart.love/blog/{{ name }}"/>
     
     <!--and the bird app bc they just have to be special-->
     <meta name="twitter:title" content="{{ title}} || Lockheart's Lair" />
@@ -24,9 +24,9 @@
     <meta name="twitter:description" content="{{ description }}">
     <meta property="twitter:card" content="summary_large_image"/>
     
-    <link rel="canonical" href="https://mc.lockheart.love/{{ name }}"/>
+    <link rel="canonical" href="https://mc.lockheart.love/blog/{{ name }}"/>
     <link rel="icon" type="image/x-icon" href="/img/icon.png">
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/blog.css">
     {{ css | safe }}
     <script src='/javascript/kofi.js'></script>
     {{ js | safe }}
@@ -34,7 +34,6 @@
 </head>
 <body>
     <div id="container">
-        <a id="logo" href="/"><img src="/img/logo.png" alt="Lockheart"></a>
         <div id="content">
             <div id="nav">
                 {% include 'nav.njk' %}

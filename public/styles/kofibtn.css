@@ -1,8 +1,7 @@
 @font-face {
     font-family: Minecraft;
-    src: url("/fonts/minecraft_font.ttf");
-}@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;0,700;1,500&family=Alegreya:ital,wght@0,500;0,700;1,500&display=swap');
-
+    src: url("/fonts/Minecraft-Seven_v2.ttf");
+}
 .floatingchat-donate-button {
     background-color: #C6C6C6;
     border:outset 2px grey;
@@ -10,7 +9,7 @@
     display: flex;
     align-items: center;
     font-family: "Minecraft", serif !important;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500 !important;
     width: max-content;
     color: black;
@@ -21,7 +20,8 @@
     display: flex !important;
 }
 .kofiimg { 
-    width: 39px;
+    width: 35px;
+    padding-left: 16px;
 }
 
 /*the dreaded sizing*/

@@ -32,52 +32,62 @@
     <style>
         @font-face {
             font-family: Minecraft;
-            src: url("/fonts/minecraft_font.ttf");
+            src: url("/fonts/Minecraft-Seven_v2.ttf");
         }
         html{
             height:100%;
             width:100%;
             font-size: 16px;
         }
-        body:before{
-            background-attachment: scroll;
-            content: '';
-            display: block;
-            position: fixed;
-            width:100vw;
-            height:100vh;
-            left:0;
-            top:0;
-            transform: scale(1);
-            z-index: -700;
-            background-image: url("/img/death.jpg");
-            background-size: cover, auto;
-            background-position: center, 0% 0%;
-            background-repeat: no-repeat, repeat;
-    }
-    body{
-        
-    font-size:1rem;
-    }
+        body{
+            background-color: #64181A;
+            color:#F7F9F8;
+            font-family: "Minecraft", serif;
+            font-size: 25px;
+        }
     button{
         font-family: "Minecraft", serif;
         font-size: 17px;
         background-color: #C6C6C6;
         color: #4D4D4E;
-        border: solid black;
+        border: outset black;
         width:325px;
         height:65px;
-        margin:19px
+        margin: 0 19px
+    }
+    #content{
+        padding: 10px;
+        line-height: 200px;
+        height: 200px;
+    }
+    #dee{
+        text-align: center;
+        text-shadow: 2px 2px #414145;
+        margin:auto;
     }
     #btns{
-        position: absolute;
-        left:275px;
-        bottom: 205px
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 770px){
+        #content{
+        padding: 10px;
+        line-height: 100px;
+        height: 200px;
+        }
+        #btns{
+            display: block;
+        }
     }
     </style>
-    <div id="btns">
-        <button id="respawn" onclick="history.go(-1);">Respawn</button>
-        <button id="menu" onclick="location.href='index'">Main menu</button>
+    <div id="content">
+        <div id="dee">
+            <p>You Died!</p>
+            <div id="btns">
+                <button id="respawn" onclick="history.go(-1);">Respawn</button>
+                <button id="menu" onclick="location.href='index'">Main menu</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
