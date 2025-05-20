@@ -1,17 +1,12 @@
 @font-face {
-    font-family: MinecraftTen;
-    src: url("/fonts/MinecraftTen-VGORe.ttf");
-}
-@font-face {
     font-family: Minecraft;
     src: url("/fonts/Minecraft-Seven_v2.ttf");
 }
 :root{
-    --bg:#C6C6C6;
+    --bg:#FDF8EC;
     --altbg:#8B8B8B;
     --main: black;
-    --lighter: #52A435;
-    --titlefont:"MinecraftTen", serif;
+    --lighter: #bca387;
     --font:"Minecraft", serif;
   }
 html{
@@ -44,7 +39,7 @@ body{
 }
 body, html {
     scrollbar-width: auto;
-    scrollbar-color:  var(--main) var(--bg);
+    scrollbar-color:  var(--lighter) var(--bg);
 }
 ::selection {
     background: var(--lighter);
@@ -52,37 +47,32 @@ body, html {
   }
 /*main stuff*/
 #container{
-    max-width:1000px;
+    max-width:600px;
     text-align:left;
     margin: auto;
+    display:flex;
 }
-#content{
+.content{
     background-color: var(--bg);
-    border: solid 2px black;
     width: 90%;
-    min-height:20rem;
+    height:15rem;
     font-size: 1rem;
-    padding: 1rem;
-    margin: auto;
+    padding: 0 15px;
+    margin: 15px 15px 0;
     text-align: center;
+    overflow-y: auto;
     scrollbar-width: thin;
 }
 p{text-align: start;}
-.box{
-    background-color: var(--altbg);
-    width:min-content;
-    border: outset 2px black;
-    padding:5px
-}
-.flex{
-    display:flex;
-}
 /*nav*/
-#nav{
-    display: flex;
-    margin-top: -1rem;
-    border-bottom: solid black 2px;
-    justify-content: space-around;
+#nav h2{
+    font-size: 19px;
+    display: inline;
+}
+#nav ul, p{
+    list-style-type: square;
+    text-align: start;
+    line-height: 1.2rem;
 }
 /*images*/
 #logo img{
@@ -97,9 +87,6 @@ p{text-align: start;}
     -webkit-transition: 0.6s ease
 }
 /*text*/
-h1, h2, h3{
-    font-family: var(--titlefont);
-}
 a{
     text-align: inherit;
     text-decoration: underline;
@@ -109,26 +96,47 @@ a:hover{
     color: var(--lighter);
 }
 /*other*/
-#preloader {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    background: var(--lighter)
-      url("/img/creeper.png")
-      no-repeat center;
-    z-index: 9999;
+hr{
+    background-color:var(--lighter);
+    border:none;
+    border-radius:5px;
+    height: 2px;
+}
+#big{display:inline}
+#little{display: none;}
+@-moz-document url-prefix() {
+    .content {
+        margin-top: -0.5rem
+    }
+    #nav {
+        margin-top: auto
+    }
   }
 /*media querey*/
 @media (max-width: 770px){
+    body:before{
+        background-image: '';
+        background: #603A22;
+    }
     html{
         font-size:15px
     }
-    .flex{
-        display: block
+    #container{
+        max-width:100%;
+        margin: auto;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    .content{
+        width: 80%;
+        height:auto;
+        font-size: 1rem;
+        padding: 0 15px;
+        margin: 15px 15px 0;
+        text-align: center;
+    }
+    #nav{padding-top: 15px;}
+    #big{display:none}
+    #little{display: inline;padding-bottom: 15px;}
 }
