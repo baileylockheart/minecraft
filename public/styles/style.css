@@ -59,16 +59,30 @@ body, html {
 #content{
     background-color: var(--bg);
     border: solid 2px black;
-    width: 100%;
+    width: 90%;
     min-height:20rem;
     font-size: 1rem;
     padding: 1rem;
     margin: auto;
     text-align: center;
+    scrollbar-width: thin;
 }
+p{text-align: start;}
 .box{
     background-color: var(--altbg);
-    border: outset 2px black
+    width:min-content;
+    border: outset 2px black;
+    padding:5px
+}
+.flex{
+    display:flex;
+}
+/*nav*/
+#nav{
+    display: flex;
+    margin-top: -1rem;
+    border-bottom: solid black 2px;
+    justify-content: space-around;
 }
 /*images*/
 #logo img{
@@ -93,4 +107,28 @@ a{
 }
 a:hover{
     color: var(--lighter);
+}
+/*other*/
+#preloader {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: var(--lighter)
+      url("/img/creeper.png")
+      no-repeat center;
+    z-index: 9999;
+  }
+/*media querey*/
+@media (max-width: 770px){
+    html{
+        font-size:15px
+    }
+    .flex{
+        display: block
+    }
 }

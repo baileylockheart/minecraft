@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>You died!</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light only"/>
+    <meta name="theme-color" content="#52A435">
+    
+    <!--meta tags-->
+    <meta name="description" content="Respawn?"/>
+    <meta property="og:site_name" content="Lockheart Love"/>
+    <meta property="og:title" content="You died!"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Respawn?"/>
+    <meta property="og:image" content="https://mc.lockheart.love/img/death.jpg"/>
+    <meta property="og:image:height" content="800"/>
+    <meta property="og:url" content="https://mc.lockheart.love/{{ name }}"/>
+    
+    <!--and the bird app bc they just have to be special-->
+    <meta name="twitter:title" content="You died!" />
+    <meta name="twitter:image" content="https://mc.lockheart.love/img/death.jpg">
+    <meta name="twitter:description" content="Respawn?">
+    <meta property="twitter:card" content="summary_large_image"/>
+    
+    <link rel="canonical" href="https://mc.lockheart.love/404"/>
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <div id="preloader"></div>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: Minecraft;
+            src: url("/fonts/minecraft_font.ttf");
+        }
+        html{
+            height:100%;
+            width:100%;
+            font-size: 16px;
+        }
+        body:before{
+            background-attachment: scroll;
+            content: '';
+            display: block;
+            position: fixed;
+            width:100vw;
+            height:100vh;
+            left:0;
+            top:0;
+            transform: scale(1);
+            z-index: -700;
+            background-image: url("/img/death.jpg");
+            background-size: cover, auto;
+            background-position: center, 0% 0%;
+            background-repeat: no-repeat, repeat;
+    }
+    body{
+        
+    font-size:1rem;
+    }
+    button{
+        font-family: "Minecraft", serif;
+        font-size: 17px;
+        background-color: #C6C6C6;
+        color: #4D4D4E;
+        border: solid black;
+        width:325px;
+        height:65px;
+        margin:19px
+    }
+    #btns{
+        position: absolute;
+        left:275px;
+        bottom: 205px
+    }
+    </style>
+    <div id="btns">
+        <button id="respawn" onclick="history.go(-1);">Respawn</button>
+        <button id="menu" onclick="location.href='index'">Main menu</button>
+    </div>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light only"/>
-    <meta name="theme-color" content="#ff8ac5">
+    <meta name="theme-color" content="#52A435">
     
     <!--meta tags-->
     <meta name="description" content="{{ description }}"/>
@@ -36,10 +36,13 @@
     <div id="container">
         <a id="logo" href="/"><img src="/img/logo.png" alt="Lockheart"></a>
         <div id="content">
-            <div id="nav"><script src="/javascript/navbar.js"></script></div>
+            <div id="nav">
+                {% include 'nav.njk' %}
+            </div>
 {{ content | safe }}
         </div>
     </div>
+    <br><br>
     <script>
         kofiWidgetOverlay.draw('baileylockheart', {
             'type': 'floating-chat',
