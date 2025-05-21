@@ -70,9 +70,9 @@ body, html {
 p{text-align: start;}
 .box{
     background-color: var(--altbg);
-    width:min-content;
     border: outset 2px black;
-    padding:5px
+    padding:5px;
+    margin:8px;
 }
 .flex{
     display:flex;
@@ -108,7 +108,26 @@ a{
 a:hover{
     color: var(--lighter);
 }
+.box a:hover{
+    color: #64181A;
+}
 /*other*/
+hr{
+    background-color:var(--main);
+    border:none;
+    border-radius:5px;
+    height: 2px;
+}
+button{
+    font-family: "Minecraft", serif;
+    font-size: 17px;
+    background-color: #C6C6C6;
+    color: #4D4D4E;
+    border: outset black;
+    width:325px;
+    height:65px;
+    margin: 0 19px
+}
 #preloader {
     align-items: center;
     justify-content: center;

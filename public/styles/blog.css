@@ -96,13 +96,33 @@ a:hover{
     color: var(--lighter);
 }
 /*other*/
+button{
+    font-family: "Minecraft", serif;
+    font-size: 17px;
+    background-color: #C6C6C6;
+    color: #4D4D4E;
+    border: outset black;
+    width:200px;
+    height:45px;
+    margin: auto
+}
+#btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
 hr{
     background-color:var(--lighter);
     border:none;
     border-radius:5px;
     height: 2px;
 }
-#big{display:inline}
+#big{
+    display:inline;
+}
+#big li{
+    margin-left:1rem;
+}
 #little{display: none;}
 @-moz-document url-prefix() {
     .content {
@@ -111,8 +131,32 @@ hr{
     #nav {
         margin-top: auto
     }
+    #btns{
+        margin-top: 2rem;
+    }
   }
 /*media querey*/
+@media (max-width: 1225px){
+    #container{
+        max-width:540px;
+    }
+    .content{
+        background-color: var(--bg);
+        width: 90%;
+        height:14rem;
+        font-size: 1rem;
+        padding: 0 15px;
+        margin: 15px 15px 0;
+        text-align: center;
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+    @-moz-document url-prefix() {
+        #btns{
+            margin-top: 1.5rem;
+        }
+      }
+}
 @media (max-width: 770px){
     body:before{
         background-image: '';
@@ -139,4 +183,7 @@ hr{
     #nav{padding-top: 15px;}
     #big{display:none}
     #little{display: inline;padding-bottom: 15px;}
+    #little li{
+        margin-left:-2rem;
+    }
 }
