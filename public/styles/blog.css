@@ -25,7 +25,7 @@ body:before{
     top:0;
     transform: scale(1);
     z-index: -700;
-    background-image: url("/img/blog/book.png");
+    background-image: url("/img/book.png");
     background-size: cover, auto;
     background-position: center, 0% 0%;
     background-repeat: no-repeat, repeat;
@@ -74,6 +74,9 @@ p{text-align: start;}
     text-align: start;
     line-height: 1.2rem;
 }
+#blog h2{display: block;font-size: 20px !important;text-decoration: none !important;}
+#blog h2:before, #blog h2:after{content:' ▪ '}
+a#blog{text-decoration: none !important;}
 /*images*/
 #logo img{
     display:flex;
@@ -105,6 +108,9 @@ button{
     width:200px;
     height:45px;
     margin: auto
+}
+button:hover{
+    background-color: var(--altbg);
 }
 #btns{
     display: flex;
