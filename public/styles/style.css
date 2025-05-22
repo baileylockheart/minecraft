@@ -121,12 +121,15 @@ hr{
 button{
     font-family: "Minecraft", serif;
     font-size: 17px;
-    background-color: #C6C6C6;
+    background-color: var(--bg);
     color: #4D4D4E;
     border: outset black;
     width:325px;
     height:65px;
     margin: 0 19px
+}
+button:hover{
+    background-color: var(--altbg);
 }
 #preloader {
     align-items: center;
