@@ -61,8 +61,9 @@
                 </div>
                 <div id="links">
                     <a href="{{ direct | safe }}" download><button>Direct Download</button></a>
-                    <a href="{{ kofi | safe }}" target="_blank"><button>Ko-Fi</button></a>
                     <a href="{{ pmc | safe }}" target="_blank"><button>Planet Minecraft</button></a>
+                    {{ kofi1 | safe }}<a href="{{ kofiURL | safe }}" target="_blank"><button>Ko-Fi</button></a>{{ kofi2 | safe }}
+                    {{ credit1 | safe }}<a href="{{ creditURL | safe }}" target="_blank"><button>Credits</button></a>{{ credit2 | safe }}
                     <hr>
                     <p>Made for Minecraft Bedrock</p>
                     <p>Released: {{ released }}</p>
@@ -70,13 +71,14 @@
             </div>
         </div>
     </div>
-    <br><br>
+    <br><br>{{ tip1 | safe }}
     <script>
         kofiWidgetOverlay.draw('baileylockheart', {
             'type': 'floating-chat',
             'floating-chat.donateButton.background-color': '#C6C6C6',
             'floating-chat.donateButton.text-color': '#000'
-        });
+        });</script>{{ tip2 | safe }}
+    <script>
         var loader = document.getElementById("preloader");
         window.addEventListener("load", function () {
           loader.style.display = "none";

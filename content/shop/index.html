@@ -6,13 +6,13 @@ name: shop
 ---
 <style>
     .box{
-        width: min-content;
+        width: calc(min-content + 5);
         display: block;
         text-decoration: none;
         color: black;
     }
     .box img{
-        height: 7rem
+        height: 8rem
     }
     .box:hover{
     transform: scale(1.05);
@@ -25,20 +25,96 @@ name: shop
         flex-wrap: wrap;
         justify-content: center;
     }
+    .filterDiv{
+        display:none;
+    }
+    .show {
+    display: block;
+    }
+    #myBtnContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    button.btn{
+        padding: 10px;
+        margin:10px;
+        width:auto;
+        height:auto
+    }
 </style>
 <h1>My shop!</h1>
 <p>These are texture packs I've made for my world, which I made public for others to use! Despite the word "shop", everything's free, though donations are much appreciated :3</p>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('items')"> Items</button>
+    <button class="btn" onclick="filterSelection('gui')"> GUI</button>
+    <button class="btn" onclick="filterSelection('ports')"> Ports</button>
+</div>
 <div id="products">
-    <a class="box"href="/shop/nicer-bed-icons">
+    <a class="filterDiv box items"href="/shop/trans-flag-spyglass">
+        <img src="/img/shop/trans-flag-spyglass.webp" alt="Trans Flag Spyglass">
+        <h3 class="title">Trans Flag Spyglass</h3>
+    </a>
+    <a class="filterDiv box ports"href="/shop/yarn-wool-texture">
+        <img src="/img/shop/yarn-wool-texture.webp" alt="Ramna's Yarn">
+        <h3 class="title">Ramna's Yarn</h3>
+    </a>
+    <a class="filterDiv box items"href="/shop/nicer-bed-icons">
         <img src="/img/shop/nicer-bed-icons.webp" alt="nicer bed icons">
         <h3 class="title">Nicer Bed Icons</h3>
     </a>
-    <a class="box"href="/shop/star-crosshair">
+    <a class="filterDiv box gui"href="/shop/star-crosshair">
         <img src="/img/shop/star-crosshair.webp" alt="star crosshair">
         <h3 class="title">Star Crosshair</h3>
     </a>
-    <a class="box"href="/shop/heart-crosshair">
+    <a class="filterDiv box gui"href="/shop/heart-crosshair">
         <img src="/img/shop/heart-crosshair.webp" alt="heart crosshair">
         <h3 class="title">Heart Crosshair</h3>
     </a>
 </div>
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    }
+
+    function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+    }
+
+    function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+    }
+    element.className = arr1.join(" ");
+    }
+
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+    }
+</script>  
