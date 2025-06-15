@@ -45,13 +45,13 @@
             </div>
 <style>
     .box{
-        width: calc(min-content + 5);
+        width: 14rem;
         display: block;
         text-decoration: none;
         color: black;
     }
     .box img{
-        height: 8rem
+        height: 7.5rem
     }
     .box:hover{
     transform: scale(1.05);
@@ -85,19 +85,24 @@
     }
 </style>
 <h1>My shop!</h1>
-<p>These are texture packs I've made for my world, which I made public for others to use! Despite the word "shop", everything's free, though donations are much appreciated :3</p>
+<p>These are texture packs I've put together, which I made public for others to use! Despite the word "shop", everything's free!! I hope you enjoy :3</p>
 <div id="myBtnContainer">
     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('blocks')"> Blocks</button>
     <button class="btn" onclick="filterSelection('items')"> Items</button>
     <button class="btn" onclick="filterSelection('gui')"> GUI</button>
     <button class="btn" onclick="filterSelection('ports')"> Ports</button>
 </div>
 <div id="products">
+    <a class="filterDiv box blocks items"href="/shop/lighter-mangrove">
+        <img src="/img/shop/lighter-mangrove.webp" alt="Lighter Mangrove">
+        <h3 class="title">Lighter Mangrove</h3>
+    </a>
     <a class="filterDiv box items"href="/shop/trans-flag-spyglass">
         <img src="/img/shop/trans-flag-spyglass.webp" alt="Trans Flag Spyglass">
         <h3 class="title">Trans Flag Spyglass</h3>
     </a>
-    <a class="filterDiv box ports"href="/shop/yarn-wool-texture">
+    <a class="filterDiv box blocks ports"href="/shop/yarn-wool-texture">
         <img src="/img/shop/yarn-wool-texture.webp" alt="Ramna's Yarn">
         <h3 class="title">Ramna's Yarn</h3>
     </a>
