@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title}} || Lockheart's Lair</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light only"/>
+    <meta name="theme-color" content="#52A435">
+    
+    <!--meta tags-->
+    <meta name="description" content="{{ title }} from my shop!"/>
+    <meta property="og:site_name" content="Lockheart Love"/>
+    <meta property="og:title" content="{{ title}} || Lockheart's Lair"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ title }} from my shop!"/>
+    <meta property="og:image" content="https://baileylockheart.github.io/images/minecraft.png"/>
+    <meta property="og:image:height" content="800"/>
+    <meta property="og:url" content="https://mc.lockheart.love/shop/{{ name }}"/>
+    
+    <!--and the bird app bc they just have to be special-->
+    <meta name="twitter:title" content="{{ title}} || Lockheart's Lair" />
+    <meta name="twitter:image" content="https://baileylockheart.github.io/images/minecraft.png">
+    <meta name="twitter:description" content="{{ title }} from my shop!">
+    <meta property="twitter:card" content="summary_large_image"/>
+    
+    <link rel="canonical" href="https://mc.lockheart.love/shop/{{ name }}"/>
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    {{ css | safe }}
+    <script src='/javascript/kofi.js'></script>
+    {{ js | safe }}
+    <div id="preloader"></div>
+</head>
+<style>
+    #desc{
+        margin:5px 15px
+    }
+    img#product{
+        width:100%
+    }
+    #links button{
+        margin: 5px auto
+    }
+    @media (max-width: 770px){
+        #links p{text-align: center;}
+    }
+</style>
+<body>
+    <div id="container">
+        <a id="logo" href="/"><img src="/img/logo.png" alt="Lockheart"></a>
+        <div id="content">
+            <div id="nav">
+                {% include 'nav.njk' %}
+            </div>
+            <h1>Shop &FilledVerySmallSquare; {{ title}}</h1>
+            <div class="flex">
+                <div id="desc">
+                    <img id="product" src="/img/shop/{{ name }}.webp">
+                    {{ content | safe }}
+                </div>
+                <div id="links">
+                    <a href="{{ ml | safe }}" download><button>Mod List</button></a>
+                    <a href="{{ curseforge | safe }}" target="_blank"><button>Curseforge</button></a>
+                    <a href="{{ modrinth | safe }}" target="_blank"><button>Modrinth</button></a>
+                    <hr>
+                    <p>Made for Minecraft Java</p>
+                    <p>Released: {{ released }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script>
+        kofiWidgetOverlay.draw('baileylockheart', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.background-color': '#C6C6C6',
+            'floating-chat.donateButton.text-color': '#000'
+        });
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+    </script>
+</body>
+</html>
