@@ -62,7 +62,7 @@
                 <div id="links">
                     <a href="{{ ml | safe }}" download><button>Mod List</button></a>
                     <a href="{{ modrinth | safe }}" target="_blank"><button>Modrinth</button></a>
-                    <a href="{{ curseforge | safe }}" target="_blank"><button>Curseforge</button></a>
+                    {{ extra | safe }}
                     <hr>
                     <p>Made for Minecraft Java</p>
                     <p>Released: {{ released }}</p>
