@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title}} || Lockheart's Lair</title>
+    <title>Farming Fun || Lockheart's Lair</title>
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -9,27 +9,27 @@
     <meta name="theme-color" content="#52A435">
     
     <!--meta tags-->
-    <meta name="description" content="{{ title }} from my shop!"/>
+    <meta name="description" content="Farming Fun from my shop!"/>
     <meta property="og:site_name" content="Lockheart Love"/>
-    <meta property="og:title" content="{{ title}} || Lockheart's Lair"/>
+    <meta property="og:title" content="Farming Fun || Lockheart's Lair"/>
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="{{ title }} from my shop!"/>
+    <meta property="og:description" content="Farming Fun from my shop!"/>
     <meta property="og:image" content="https://baileylockheart.github.io/images/minecraft.png"/>
     <meta property="og:image:height" content="800"/>
-    <meta property="og:url" content="https://mc.lockheart.love/shop/{{ name }}"/>
+    <meta property="og:url" content="https://mc.lockheart.love/shop/farming-fun"/>
     
     <!--and the bird app bc they just have to be special-->
-    <meta name="twitter:title" content="{{ title}} || Lockheart's Lair" />
+    <meta name="twitter:title" content="Farming Fun || Lockheart's Lair" />
     <meta name="twitter:image" content="https://baileylockheart.github.io/images/minecraft.png">
-    <meta name="twitter:description" content="{{ title }} from my shop!">
+    <meta name="twitter:description" content="Farming Fun from my shop!">
     <meta property="twitter:card" content="summary_large_image"/>
     
-    <link rel="canonical" href="https://mc.lockheart.love/shop/{{ name }}"/>
+    <link rel="canonical" href="https://mc.lockheart.love/shop/farming-fun"/>
     <link rel="icon" type="image/x-icon" href="/img/icon.png">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
-    {{ css | safe }}
+    
     <script src='/javascript/kofi.js'></script>
-    {{ js | safe }}
+    
     <div id="preloader"></div>
 </head>
 <style>
@@ -51,21 +51,26 @@
         <a id="logo" href="/"><img src="/img/logo.png" alt="Lockheart"></a>
         <div id="content">
             <div id="nav">
-                {% include 'nav.njk' %}
+                <a id="blog" href="/blog/"><h2>Blog</h2></a>
+<a id="gallery" href="/gallery"><h2>Gallery</h2></a>
+<a id="shop" href="/shop/"><h2>Shop</h2></a>
+<a id="recs" href="/recs"><h2>Recs</h2></a>
+<a id="links" href="/links"><h2>Links</h2></a>
             </div>
-            <h1>Shop &FilledVerySmallSquare; {{ title}}</h1>
+            <h1>Shop &FilledVerySmallSquare; Farming Fun</h1>
             <div class="flex">
                 <div id="desc">
-                    <img id="product" src="/img/shop/{{ name }}.webp">
-                    {{ content | safe }}
+                    <img id="product" src="/img/shop/farming-fun.webp">
+                    <p>A modpack intended to make farming into a more fun experience! It isn't particularly excessive in terms of changes, just aiming to make a vanilla-adjacent experience, but with more options and fewer inconveniences.</p>
+<p>You can create your own world if you'd like, and build a farm in exactly the way you'd like, but this modpack comes with a world of its own! Most of it's unexplored, but it gives you a base and a farm to begin with. If you're looking to break and regrow wheat for the pure satisfaction of it, I highly suggest it ^^ Overall, this modpack aims to make farming a nicer experience overall, so I hope you enjoy it :3</p>
                 </div>
                 <div id="links">
-                    <a href="{{ ml | safe }}"  target="_blank"><button>Mod List</button></a>
-                    <a href="{{ modrinth | safe }}" target="_blank"><button>Modrinth</button></a>
-                    {{ extra | safe }}
+                    <a href="https://modrinth.com/collection/SCwlAytg"  target="_blank"><button>Mod List</button></a>
+                    <a href="https://modrinth.com/modpack/farming-fun" target="_blank"><button>Modrinth</button></a>
+                    
                     <hr>
                     <p>Made for Minecraft Java</p>
-                    <p>Released: {{ released }}</p>
+                    <p>Released: July 27, 2025</p>
                 </div>
             </div>
         </div>
